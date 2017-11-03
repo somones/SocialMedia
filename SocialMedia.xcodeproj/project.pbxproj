@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3718D6EE1FACF0C400A8C7B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3718D6ED1FACF0C400A8C7B2 /* Main.storyboard */; };
 		3718D6F01FACF50F00A8C7B2 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718D6EF1FACF50F00A8C7B2 /* CircleView.swift */; };
+		3718D6F21FAD1B6200A8C7B2 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718D6F11FAD1B6200A8C7B2 /* PostCell.swift */; };
 		371A30C51FAB9DC7005A6EBA /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A30C41FAB9DC7005A6EBA /* FancyView.swift */; };
 		371A30C81FABA191005A6EBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A30C71FABA191005A6EBA /* Constants.swift */; };
 		371A30CA1FABA3CB005A6EBA /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A30C91FABA3CB005A6EBA /* RoundButton.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		3718D6ED1FACF0C400A8C7B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3718D6EF1FACF50F00A8C7B2 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		3718D6F11FAD1B6200A8C7B2 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		371A30C41FAB9DC7005A6EBA /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		371A30C71FABA191005A6EBA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		371A30C91FABA3CB005A6EBA /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				371A30CB1FABA96B005A6EBA /* FancyField.swift */,
 				371A30CD1FABAA84005A6EBA /* FancyButton.swift */,
 				3718D6EF1FACF50F00A8C7B2 /* CircleView.swift */,
+				3718D6F11FAD1B6200A8C7B2 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				373A32C11FAB2199002977E9 /* AppDelegate.swift in Sources */,
 				371A30C51FAB9DC7005A6EBA /* FancyView.swift in Sources */,
 				371A30C81FABA191005A6EBA /* Constants.swift in Sources */,
+				3718D6F21FAD1B6200A8C7B2 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
