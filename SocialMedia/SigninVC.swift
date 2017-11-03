@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SwiftKeychainWrapper
 
 class SigninVC: UIViewController {
     
@@ -18,12 +19,12 @@ class SigninVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.stringForKey(KEY_UID) {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
 
     @IBAction func facebookBtnTapped(_ sender: Any) {
@@ -48,8 +49,10 @@ class SigninVC: UIViewController {
                 print("BSS: Unable to authenticate with Firebase - \(String(describing: error))")
             } else {
                 print("BSS: Successfully authenticated with Firebase")
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
             }
-        
         })
     }
     
@@ -58,17 +61,29 @@ class SigninVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("BSS: Email user authonticated with Firebase")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("BSS: Unable to authenticate with Firebase using email")
                         } else {
                             print("BSS: Successflly authenticated with Firebase")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
             })
         }
+    }
+    
+    func completeSignIn(id: String){
+        let KeychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
+        print("BSS: Data saved to Keychain \(KeychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
 }
 

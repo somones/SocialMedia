@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3718D6EE1FACF0C400A8C7B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3718D6ED1FACF0C400A8C7B2 /* Main.storyboard */; };
+		3718D6F01FACF50F00A8C7B2 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3718D6EF1FACF50F00A8C7B2 /* CircleView.swift */; };
 		371A30C51FAB9DC7005A6EBA /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A30C41FAB9DC7005A6EBA /* FancyView.swift */; };
 		371A30C81FABA191005A6EBA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A30C71FABA191005A6EBA /* Constants.swift */; };
 		371A30CA1FABA3CB005A6EBA /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A30C91FABA3CB005A6EBA /* RoundButton.swift */; };
@@ -14,14 +16,16 @@
 		371A30CE1FABAA84005A6EBA /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371A30CD1FABAA84005A6EBA /* FancyButton.swift */; };
 		373A32C11FAB2199002977E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A32C01FAB2199002977E9 /* AppDelegate.swift */; };
 		373A32C31FAB2199002977E9 /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A32C21FAB2199002977E9 /* SigninVC.swift */; };
-		373A32C61FAB2199002977E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373A32C41FAB2199002977E9 /* Main.storyboard */; };
 		373A32C81FAB2199002977E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373A32C71FAB2199002977E9 /* Assets.xcassets */; };
 		373A32CB1FAB2199002977E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373A32C91FAB2199002977E9 /* LaunchScreen.storyboard */; };
 		373A32D31FAB21D5002977E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 373A32D21FAB21D5002977E9 /* GoogleService-Info.plist */; };
+		37A0A0D51FABF521004B48CC /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0A0D41FABF521004B48CC /* FeedVC.swift */; };
 		864F80FD3E8AB7E015DE4B93 /* Pods_SocialMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C5BE689792AED92F82C2C9 /* Pods_SocialMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3718D6ED1FACF0C400A8C7B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3718D6EF1FACF50F00A8C7B2 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		371A30C41FAB9DC7005A6EBA /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		371A30C71FABA191005A6EBA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		371A30C91FABA3CB005A6EBA /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -30,11 +34,11 @@
 		373A32BD1FAB2199002977E9 /* SocialMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		373A32C01FAB2199002977E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		373A32C21FAB2199002977E9 /* SigninVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
-		373A32C51FAB2199002977E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		373A32C71FAB2199002977E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373A32CA1FAB2199002977E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		373A32CC1FAB2199002977E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		373A32D21FAB21D5002977E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		37A0A0D41FABF521004B48CC /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		A12B43F25AC36CAB72259A7D /* Pods-SocialMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMedia/Pods-SocialMedia.debug.xcconfig"; sourceTree = "<group>"; };
 		A8C5BE689792AED92F82C2C9 /* Pods_SocialMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1CA93F1D363CCC700201D61 /* Pods-SocialMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMedia/Pods-SocialMedia.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 				371A30C91FABA3CB005A6EBA /* RoundButton.swift */,
 				371A30CB1FABA96B005A6EBA /* FancyField.swift */,
 				371A30CD1FABAA84005A6EBA /* FancyButton.swift */,
+				3718D6EF1FACF50F00A8C7B2 /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -74,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				373A32C21FAB2199002977E9 /* SigninVC.swift */,
+				37A0A0D41FABF521004B48CC /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -112,7 +118,7 @@
 				371A30C31FAB23B6005A6EBA /* Controller */,
 				371A30C21FAB23AC005A6EBA /* View */,
 				373A32C01FAB2199002977E9 /* AppDelegate.swift */,
-				373A32C41FAB2199002977E9 /* Main.storyboard */,
+				3718D6ED1FACF0C400A8C7B2 /* Main.storyboard */,
 				373A32C71FAB2199002977E9 /* Assets.xcassets */,
 				373A32C91FAB2199002977E9 /* LaunchScreen.storyboard */,
 				373A32CC1FAB2199002977E9 /* Info.plist */,
@@ -173,6 +179,7 @@
 				TargetAttributes = {
 					373A32BC1FAB2199002977E9 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -203,7 +210,7 @@
 				373A32CB1FAB2199002977E9 /* LaunchScreen.storyboard in Resources */,
 				373A32D31FAB21D5002977E9 /* GoogleService-Info.plist in Resources */,
 				373A32C81FAB2199002977E9 /* Assets.xcassets in Resources */,
-				373A32C61FAB2199002977E9 /* Main.storyboard in Resources */,
+				3718D6EE1FACF0C400A8C7B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +229,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -232,6 +240,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -280,10 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3718D6F01FACF50F00A8C7B2 /* CircleView.swift in Sources */,
 				371A30CC1FABA96B005A6EBA /* FancyField.swift in Sources */,
 				373A32C31FAB2199002977E9 /* SigninVC.swift in Sources */,
 				371A30CA1FABA3CB005A6EBA /* RoundButton.swift in Sources */,
 				371A30CE1FABAA84005A6EBA /* FancyButton.swift in Sources */,
+				37A0A0D51FABF521004B48CC /* FeedVC.swift in Sources */,
 				373A32C11FAB2199002977E9 /* AppDelegate.swift in Sources */,
 				371A30C51FAB9DC7005A6EBA /* FancyView.swift in Sources */,
 				371A30C81FABA191005A6EBA /* Constants.swift in Sources */,
@@ -293,14 +304,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		373A32C41FAB2199002977E9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				373A32C51FAB2199002977E9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		373A32C91FAB2199002977E9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
