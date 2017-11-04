@@ -10,15 +10,24 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageAdd: CircleView!
+    
+    
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         DataServives.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
@@ -44,6 +53,7 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let post = posts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
@@ -53,6 +63,20 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             return PostCell()
         }
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            imageAdd.image = image
+        } else {
+            print("BSS: A valid image wasn't selected")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addImageTapped(_ sender: Any) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     
     @IBAction func signOutTapped(_ sender: Any) {
         _ = KeychainWrapper.removeObjectForKey(KEY_UID)
