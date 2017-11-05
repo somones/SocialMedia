@@ -15,11 +15,11 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: CircleView!
     @IBOutlet weak var captionField: FancyField!
-    
+
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
-    static var imageCashe: NSCache<NSString, UIImage> = NSCache()
+    static var imageCashe: NSCache<AnyObject, UIImage> = NSCache()
     var imageSelected = false
 
 
@@ -63,12 +63,10 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
             if let img = FeedVC.imageCashe.object(forKey: post.imageUrl as NSString) {
                 cell.configureCell(post: post, img: img)
-                return cell
             } else {
-                cell.configureCell(post: post)
-                return cell
+                cell.configureCell(post: post, img: nil)
             }
-            
+            return cell 
         } else {
             return PostCell()
         }
@@ -122,8 +120,9 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
     func postToFirebase(imgUrl: String) {
         let post: Dictionary<String, Any> = [
         "caption": captionField.text!,
-        "imagUrl": imgUrl,
-        "likes": 0]
+        "imageUrl": imgUrl,
+        "likes": 0
+        ]
         
         let firebasePost = DataServives.ds.REF_POSTS.childByAutoId()
         firebasePost.setValue(post)
@@ -132,7 +131,6 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
         imageSelected = false
         imageAdd.image = UIImage(named: "add-image")
         tableView.reloadData()
-        
     }
     
     @IBAction func signOutTapped(_ sender: Any) {
